@@ -27,7 +27,6 @@ public class EjemploJdbc {
 			conn.close();
 		}catch (SQLException throwables) {
 			throwables.printStackTrace();
-			
 		}
 	}
 }
