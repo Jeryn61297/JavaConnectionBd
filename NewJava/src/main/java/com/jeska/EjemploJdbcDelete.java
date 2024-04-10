@@ -19,6 +19,7 @@ public class EjemploJdbcDelete {
 		try (Connection conn = ConexionBaseDatos.getInstance()) {
 
 			Repositorio<Producto> repositorio = new ProductoRepositorioImple();
+			/*
 			System.out.println("============ Listar ============");
 			repositorio.listar().forEach(System.out::println);
 			System.out.println(" ");
@@ -26,9 +27,10 @@ public class EjemploJdbcDelete {
 			System.out.println("============ Obtener por ID ============");
 			System.out.println(repositorio.porId(1L));
 			System.out.println(" ");
+			*/
 			
 			System.out.println("============ Eliminar producto ============");
-			repositorio.eliminar(2L);
+			repositorio.eliminar(13L);
 			System.out.println("Producto eliminado con exito");
 			repositorio.listar().forEach(System.out::println);
 

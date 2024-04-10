@@ -18,17 +18,20 @@ public class EjemploJdbcInsert {
 
 		try (Connection conn = ConexionBaseDatos.getInstance()) {
 
-			Repositorio<Producto> repositorio = new ProductoRepositorioImple();
-			System.out.println("============ Listar ============");
-			repositorio.listar().forEach(System.out::println);
-			
-			System.out.println("============ Obtener por ID ============");
-			System.out.println(repositorio.porId(1L));
-			
+			  Repositorio<Producto> repositorio = new ProductoRepositorioImple();
+			  
+			 /*
+			 * System.out.println("============ Listar ============");
+			 * repositorio.listar().forEach(System.out::println); System.out.println(" ");
+			 * 
+			 * System.out.println("============ Obtener por ID ============");
+			 * System.out.println(repositorio.porId(3L)); System.out.println(" ");
+			 */
+
 			System.out.println("============ Insertar nuevo producto ============");
 			Producto producto = new Producto();
-			producto.setNombre("AppleWatch");
-			producto.setPrecio(9000);
+			producto.setNombre("Mochila");
+			producto.setPrecio(800);
 			producto.setFechaRegistro(new Date());
 			repositorio.guardar(producto);
 			System.out.println("Producto guardado con exito");

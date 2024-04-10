@@ -19,19 +19,21 @@ public class EjemploJdbcUpdate {
 		try (Connection conn = ConexionBaseDatos.getInstance()) {
 
 			Repositorio<Producto> repositorio = new ProductoRepositorioImple();
+			/*
 			System.out.println("============ Listar ============");
 			repositorio.listar().forEach(System.out::println);
 			System.out.println(" ");
 			
 			System.out.println("============ Obtener por ID ============");
-			System.out.println(repositorio.porId(1L));
+			System.out.println(repositorio.porId(3L));
 			System.out.println(" ");
+			*/
 			
 			System.out.println("============ Editar producto ============");
 			Producto producto = new Producto();
-			producto.setId(6L);
-			producto.setNombre("Apple Watch");
-			producto.setPrecio(9000);
+			producto.setId(13L);
+			producto.setNombre("Mochila");
+			producto.setPrecio(900);
 			//producto.setFechaRegistro(new Date());
 			repositorio.guardar(producto);
 			System.out.println("Producto editado con exito");
