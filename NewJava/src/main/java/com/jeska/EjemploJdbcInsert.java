@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
 
+import com.jeska.model.Categoria;
 import com.jeska.model.Producto;
 import com.jeska.repositorio.ProductoRepositorioImple;
 import com.jeska.repositorio.Repositorio;
@@ -30,10 +31,14 @@ public class EjemploJdbcInsert {
 
 			System.out.println("============ Insertar nuevo producto ============");
 			Producto producto = new Producto();
-			producto.setNombre("Mochila");
-			producto.setPrecio(800);
+			producto.setNombre("Laptop HP");
+			producto.setPrecio(19999);
 			producto.setFechaRegistro(new Date());
+			Categoria categoria = new Categoria();
+			categoria.setId(3L);
+			producto.setCategoria(categoria);
 			repositorio.guardar(producto);
+			
 			System.out.println("Producto guardado con exito");
 			repositorio.listar().forEach(System.out::println);
 
